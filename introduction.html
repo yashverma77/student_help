@@ -181,7 +181,33 @@
             border-radius: 4px;
             cursor: pointer;
         }
+ /* Animation for footer */
+ footer {
+            animation: slide-up 1s ease-in-out;
+        }
 
+        @keyframes slide-up {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Scroll Animation */
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
         /* Scroll effect */
         html, body {
             scroll-behavior: smooth;
