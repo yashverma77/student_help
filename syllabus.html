@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e9eef5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .navbar {
+            width: 200px;
+            background-color: #1b2a49;
+            padding: 20px;
+            height: 100vh;
+            transition: width 0.3s;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar.collapsed {
+            width: 60px;
+        }
+
+        .navbar a {
+            color: #d3d3d3;
+            padding: 15px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar.collapsed a .label {
+            display: none;
+        }
+
+        .navbar a:hover {
+            background-color: #34495e;
+        }
+
+        .menu-button {
+            background-color: #5067a9;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+        }
+
+        .content {
+            margin-left: 220px;
+            padding: 50px 40px;
+            background-color: #f7f9fc;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #219150;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #1b2a49;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        h1 i {
+            margin-right: 10px;
+        }
+
+        .syllabus-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .syllabus-box {
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .syllabus-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .syllabus-box h2 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .syllabus-box p {
+            margin-bottom: 20px;
+            color: #4a4a4a;
+        }
+
+        .syllabus-box a.download-button {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .syllabus-box a.download-button:hover {
+            background-color: #1a669d;
+        }
+
+        footer {
+            background-color: #2F4F4F;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        footer .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        footer .social-icons a:hover {
+            transform: scale(1.2);
+            color: #3498db;
+        }
+
+        footer .contact-info p {
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <button class="menu-button" id="menuButton">☰</button>
+        <a href="index.html"><i class="fas fa-home icon"></i><span class="label">Home</span></a>
+        <a href="introduction.html"><i class="fas fa-info-circle icon"></i><span class="label">Introduction</span></a>
+        <a href="syllabus.html"><i class="fas fa-book icon"></i><span class="label">Syllabus</span></a>
+        <a href="library.html"><i class="fas fa-book-open icon"></i><span class="label">Library</span></a>
+        <a href="about-us.html"><i class="fas fa-users icon"></i><span class="label">About Us</span></a>
+    </div>
+
+    <div class="content">
+        <button class="back-button" onclick="window.history.back();">Back to Main Page</button>
+        <h1><i class="fas fa-book"></i> Syllabus Information</h1>
+        <div class="syllabus-container">
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2024-25</h2>
+                <p>Detailed syllabus for the academic year 2024-25.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2023-24</h2>
+                <p>Complete curriculum for the academic session 2023-24.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2022-23</h2>
+                <p>Structured syllabus for academic year 2022-23.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2021-22</h2>
+                <p>Subject details and topics for 2021-22 session.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2020-21</h2>
+                <p>Well-defined syllabus for the academic year 2020-21.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2019-20</h2>
+                <p>Curriculum and topics covered in the 2019-20 session.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2018-19</h2>
+                <p>Syllabus and academic details for the year 2018-19.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+            <div class="syllabus-box">
+                <h2>AKTU SYLLABUS 2017-18</h2>
+                <p>Comprehensive syllabus for the 2017-18 academic year.</p>
+                <a class="download-button" href="#">Download Syllabus</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <p>&copy; 2024 Dynamic Website. All rights reserved.</p>
+            <p>Email: info@dynamicwebsite.com</p>
+        </div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menuButton');
+        const navbar = document.getElementById('navbar');
+        menuButton.addEventListener('click', () => {
+            navbar.classList.toggle('collapsed');
+        });
+    </script>
+</body>
+</html>
