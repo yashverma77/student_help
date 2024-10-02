@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
-        *{
+        * {
             scroll-behavior: smooth;
         }
         body {
@@ -29,11 +29,11 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1000; /* Ensures the navbar stays above other content */
+            z-index: 1000;
         }
 
         .navbar.collapsed {
-            width: 60px; /* Smaller width when collapsed */
+            width: 60px;
         }
 
         .navbar a {
@@ -49,11 +49,11 @@
         }
 
         .navbar a .label {
-            margin-left: 10px; /* Space for label */
+            margin-left: 10px;
         }
 
         .navbar.collapsed a .label {
-            display: none; /* Hide labels when collapsed */
+            display: none;
         }
 
         .navbar a:hover {
@@ -72,17 +72,14 @@
             font-size: 18px;
         }
 
-        /* Content area */
         .content {
-            font-family: 'Poppins', sans-serif;
             margin-left: 220px;
             padding: 40px;
             background-color: #f7f9fc;
             overflow-y: auto;
-            height: calc(100vh - 100px); /* Allow scrolling */
+            height: calc(100vh - 100px);
         }
 
-        /* Main Heading */
         h1 {
             text-align: center;
             font-size: 3em;
@@ -97,7 +94,6 @@
             to { opacity: 1; }
         }
 
-        /* Section Styling */
         .section {
             margin: 30px 0;
             background-color: #f7e9d7;
@@ -105,16 +101,19 @@
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
         }
 
-        .section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .section h2 {
             color: #2c3e50;
-            font-size: 2em; /* Slightly smaller heading */
+            font-size: 2em;
             margin-bottom: 10px;
             display: flex;
             align-items: center;
@@ -122,26 +121,22 @@
         }
 
         .section h2 i {
-            margin-right: 10px; /* Space between icon and text */
+            margin-right: 10px;
         }
 
         .section p {
             font-size: 1em;
             color: #4a4a4a;
             line-height: 1.6;
-            
-
         }
 
-        /* Add a light texture background */
         body {
-            background-image: url('https://www.transparenttextures.com/patterns/paper.png'); /* Add texture */
-            background-color: #f0f0f0; /* Crème color */
+            background-image: url('https://www.transparenttextures.com/patterns/paper.png');
+            background-color: #f0f0f0;
         }
 
-        /* Footer styling */
         footer {
-            background-color:#2F4F4F;
+            background-color: #2F4F4F;
             color: white;
             text-align: center;
             padding: 20px;
@@ -181,34 +176,7 @@
             border-radius: 4px;
             cursor: pointer;
         }
- /* Animation for footer */
- footer {
-            animation: slide-up 1s ease-in-out;
-        }
 
-        @keyframes slide-up {
-            from {
-                transform: translateY(100px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Scroll Animation */
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-        /* Scroll effect */
         html, body {
             scroll-behavior: smooth;
         }
@@ -234,43 +202,39 @@
         <!-- Section 1: Introduction to CSE Department -->
         <div class="section">
             <h2><i class="fas fa-laptop-code"></i> CSE Department Overview</h2>
-            <p>The CSE department is a hub of innovative learning, fostering technological breakthroughs in areas such as AI, Machine Learning, and Data Science. Our students engage in hands-on projects that enhance their understanding of real-world applications. We encourage interdisciplinary collaboration, where students work on projects that intersect with other fields such as healthcare, finance, and environmental science, preparing them for diverse career opportunities.</p>
-
+            <p>The CSE department is a hub of innovative learning, fostering technological breakthroughs in areas such as AI, Machine Learning, and Data Science. Our students engage in hands-on projects that enhance their understanding of real-world applications. We encourage interdisciplinary collaboration, where students work on projects that intersect with other fields such as healthcare, finance, and environmental science, preparing them for diverse career opportunities...</p>
         </div>
 
         <!-- Section 2: Artificial Intelligence -->
         <div class="section">
             <h2><i class="fas fa-robot"></i> AI and Machine Learning</h2>
-            <p>AI is revolutionizing the way we interact with machines. The department is actively researching AI technologies to build smarter systems. Students participate in competitions and workshops that enhance their skills. Additionally, our AI lab focuses on projects such as natural language processing, image recognition, and autonomous systems, providing students with practical experience in developing algorithms and deploying AI solutions.</p>
+            <p>AI is revolutionizing the way we interact with machines. The department is actively researching AI technologies to build smarter systems. Students participate in competitions and workshops that enhance their skills. Additionally, our AI lab focuses on projects such as natural language processing, image recognition, and autonomous systems, providing students with practical experience in developing algorithms and deploying AI solutions...</p>
 
         </div>
 
         <!-- Section 3: Cloud Computing -->
         <div class="section">
             <h2><i class="fas fa-cloud"></i> Cloud Computing</h2>
-            <p>Cloud technology allows scalable computing power. Our labs provide hands-on experience with cloud platforms like AWS and Azure, enabling students to develop applications that are robust and scalable. We also cover cloud architecture, security, and the best practices for deploying applications in the cloud. Our partnerships with cloud service providers give students access to real-world scenarios and resources to enhance their learning.</p>
-
+            <p>Cloud technology allows scalable computing power. Our labs provide hands-on experience with cloud platforms like AWS and Azure, enabling students to develop applications that are robust and scalable. We also cover cloud architecture, security, and the best practices for deploying applications in the cloud. Our partnerships with cloud service providers give students access to real-world scenarios and resources to enhance their learning...</p>
         </div>
 
         <!-- Section 4: Data Science -->
         <div class="section">
             <h2><i class="fas fa-database"></i> Data Science</h2>
-            <p>In a digital world, cybersecurity is critical. Our curriculum focuses on network security, encryption techniques, and safeguarding systems. Students learn to analyze large data sets and draw meaningful insights. We also emphasize the importance of data ethics and privacy, preparing students to navigate the complex landscape of data governance. Projects include predictive analytics, data visualization, and real-time data processing.</p>
+            <p>In a digital world, cybersecurity is critical. Our curriculum focuses on network security, encryption techniques, and safeguarding systems. Students learn to analyze large data sets and draw meaningful insights. We also emphasize the importance of data ethics and privacy, preparing students to navigate the complex landscape of data governance. Projects include predictive analytics, data visualization, and real-time data processing...</p>
 
         </div>
 
         <!-- Section 5: Cybersecurity -->
         <div class="section">
             <h2><i class="fas fa-shield-alt"></i> Cybersecurity</h2>
-            <p>With increasing digital threats, our Cybersecurity program prepares students to defend against cyber attacks. We conduct regular workshops and simulation exercises to ensure practical knowledge. The curriculum covers penetration testing, ethical hacking, and incident response. Students also have opportunities to earn industry-recognized certifications, enhancing their employability in the field of cybersecurity.</p>
-
+            <p>With increasing digital threats, our Cybersecurity program prepares students to defend against cyber attacks. We conduct regular workshops and simulation exercises to ensure practical knowledge. The curriculum covers penetration testing, ethical hacking, and incident response. Students also have opportunities to earn industry-recognized certifications, enhancing their employability in the field of cybersecurity...</p>
         </div>
 
         <!-- Section 6: Internet of Things (IoT) -->
         <div class="section">
             <h2><i class="fas fa-network-wired"></i> Internet of Things (IoT)</h2>
-            <p>The Internet of Things is transforming everyday devices into smart devices. Our projects include smart home systems and wearable technology, preparing students for the future of connectivity. We focus on IoT architecture, communication protocols, and sensor technologies. Students also engage in projects that explore the implications of IoT on data privacy and security, ensuring they understand the challenges and responsibilities associated with connected devices.</p>
-
+            <p>The Internet of Things is transforming everyday devices into smart devices. Our projects include smart home systems and wearable technology, preparing students for the future of connectivity. We focus on IoT architecture, communication protocols, and sensor technologies. Students also engage in projects that explore the implications of IoT on data privacy and security, ensuring they understand the challenges and responsibilities associated with connected devices...</p>
         </div>
     </div>
 
@@ -298,6 +262,20 @@
 
         menuButton.addEventListener('click', () => {
             navbar.classList.toggle('collapsed');
+        });
+
+        // IntersectionObserver for section animations
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
