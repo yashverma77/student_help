@@ -18,6 +18,7 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .navbar {
@@ -44,7 +45,8 @@
             align-items: center;
             margin: 5px 0;
             border-radius: 4px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
+            justify-content: space-evenly;
         }
 
         .navbar.collapsed a .label {
@@ -53,6 +55,7 @@
 
         .navbar a:hover {
             background-color: #34495e;
+            transform: scale(1.05); /* Slight scale effect on hover */
         }
 
         .menu-button {
@@ -64,7 +67,6 @@
             margin-bottom: 20px;
             width: 100%;
             border-radius: 4px;
-            font-size: 18px;
         }
 
         .content {
@@ -87,11 +89,12 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .back-button:hover {
             background-color: #219150;
+            transform: scale(1.05); /* Scale effect on hover */
         }
 
         h1 {
@@ -100,6 +103,7 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+            animation: fadeIn 1s ease; /* Fade-in animation */
         }
 
         h1 i {
@@ -120,11 +124,22 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             text-align: center;
+            opacity: 0; /* Start hidden for animation */
+            transform: translateY(20px); /* Start slightly lower */
+            animation: fadeInUp 0.5s forwards; /* Animation when the page loads */
         }
 
         .syllabus-box:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px); /* Raise the box on hover */
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Fade in and slide up animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Move to original position */
+            }
         }
 
         .syllabus-box h2 {
@@ -143,11 +158,12 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 4px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .syllabus-box a.download-button:hover {
             background-color: #1a669d;
+            transform: scale(1.1); /* Scale effect on hover */
         }
 
         footer {
@@ -195,61 +211,63 @@
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2024-25</h2>
                 <p>Detailed syllabus for the academic year 2024-25.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202024-2025.html">Download Syllabus</a>
             </div>
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2023-24</h2>
                 <p>Complete curriculum for the academic session 2023-24.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202023-2024.html">Download Syllabus</a>
             </div>
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2022-23</h2>
                 <p>Structured syllabus for academic year 2022-23.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202022-2023.html">Download Syllabus</a>
             </div>
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2021-22</h2>
                 <p>Subject details and topics for 2021-22 session.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202021-2022.html">Download Syllabus</a>
             </div>
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2020-21</h2>
                 <p>Well-defined syllabus for the academic year 2020-21.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202020-2021.html">Download Syllabus</a>
             </div>
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2019-20</h2>
-                <p>Curriculum and topics covered in the 2019-20 session.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <p>Comprehensive syllabus for the academic year 2019-20.</p>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202019-2020.html">Download Syllabus</a>
             </div>
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2018-19</h2>
-                <p>Syllabus and academic details for the year 2018-19.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <p>Updated syllabus for the academic year 2018-19.</p>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202018-2019.html">Download Syllabus</a>
             </div>
             <div class="syllabus-box">
                 <h2>AKTU SYLLABUS 2017-18</h2>
-                <p>Comprehensive syllabus for the 2017-18 academic year.</p>
-                <a class="download-button" href="#">Download Syllabus</a>
+                <p>Syllabus for the academic year 2017-18.</p>
+                <a class="download-button" href="https://aktu.ac.in/syllabus%202017-2018.html">Download Syllabus</a>
             </div>
         </div>
     </div>
 
     <footer>
-        <div class="contact-info">
-            <p>&copy; 2024 Dynamic Website. All rights reserved.</p>
-            <p>Email: info@dynamicwebsite.com</p>
-        </div>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="contact-info">
+            <p>&copy; 2024 AKTU Syllabus. All rights reserved.</p>
+            <p>Email: info@aktu.ac.in</p>
         </div>
     </footer>
 
     <script>
         const menuButton = document.getElementById('menuButton');
         const navbar = document.getElementById('navbar');
+
         menuButton.addEventListener('click', () => {
             navbar.classList.toggle('collapsed');
         });
