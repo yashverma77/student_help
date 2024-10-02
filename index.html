@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Website</title>
+    <title>Dynamic Website for Students</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        *{
+        * {
             scroll-behavior: smooth;
         }
 
@@ -32,11 +32,11 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1000; /* Ensures the navbar stays above other content */
+            z-index: 1000;
         }
 
         .navbar.collapsed {
-            width: 60px; /* Smaller width when collapsed */
+            width: 60px;
         }
 
         .navbar a {
@@ -49,14 +49,11 @@
             border-radius: 4px;
             transition: background-color 0.3s;
             opacity: 1;
-        }
-
-        .navbar a .label {
-            margin-left: 10px; /* Space for label */
+            justify-content: space-evenly;
         }
 
         .navbar.collapsed a .label {
-            display: none; /* Hide labels when collapsed */
+            display: none;
         }
 
         .navbar a:hover {
@@ -76,18 +73,18 @@
         }
 
         .content {
-            margin-left: 220px; /* Ensure enough space for the navbar */
+            margin-left: 220px;
             padding: 20px;
             flex-grow: 1;
             background-color: #f7f9fc;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align the content */
+            align-items: center;
         }
 
         h1 {
-            text-align: center; /* Center the welcome text */
-            margin-bottom: 40px; /* Add some space below the heading */
+            text-align: center;
+            margin-bottom: 40px;
             font-size: 2.5em;
             color: #1b2a49;
         }
@@ -97,16 +94,36 @@
             margin: 40px 0;
             display: flex;
             align-items: center;
-            justify-content: center; /* Center the content horizontally */
+            justify-content: center;
             padding: 20px;
-            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transform: translateY(100px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            width: 90%; /* Reduce width to avoid horizontal space */
-            cursor: pointer; /* Change cursor to pointer */
+            width: 90%;
+            cursor: pointer;
+        }
+
+        /* Specific section colors */
+        #introduction {
+            background-color: #eaf7fd;
+        }
+
+        #syllabus {
+            background-color: #fdf3e6;
+        }
+
+        #library {
+            background-color: #e8f8e9;
+        }
+
+        #about-us {
+            background-color: #f0e1ff;
+        }
+
+        #more-info {
+            background-color: #fff6e1;
         }
 
         .section.in-view {
@@ -115,49 +132,66 @@
         }
 
         .section img {
-            width: 40%;
+            width: 30%;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            object-fit: cover; /* Ensures the image fits well */
-            transition: transform 0.3s ease; /* Add transition for image hover */
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            margin-right: 20px;
         }
 
         .section img:hover {
-            transform: scale(1.05); /* Zoom effect on hover */
+            transform: scale(1.05);
         }
 
         .section-content {
-            width: 55%;
-            padding-left: 20px;
+            width: 65%;
         }
 
         .section-content h2 {
             color: #1b2a49;
             font-size: 2em;
-            margin-bottom: 15px;
-            transition: color 0.3s; /* Add transition for heading hover */
+            margin-bottom: 10px;
+            transition: color 0.3s;
         }
 
         .section-content h2:hover {
-            color: #2980b9; /* Change color on hover */
+            color: #2980b9;
         }
 
         .section-content p {
             font-size: 1.1em;
             color: #4a4a4a;
             line-height: 1.8;
+            margin-bottom: 10px;
         }
 
-        /* Footer Styles */
+        .video-link {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .video-link img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .video-link img:hover {
+            transform: scale(1.05);
+        }
+
         footer {
-            background-color:#2F4F4F;
+            background-color: #2F4F4F;
             color: white;
             text-align: center;
-            padding: 20px; /* Adjust padding for a more compact footer */
+            padding: 20px;
             width: 100%;
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
-            margin-top: auto; /* Ensure footer stays at the bottom */
-            position: relative; /* Relative positioning for footer */
+            margin-top: auto;
+            position: relative;
         }
 
         footer .social-icons a {
@@ -175,11 +209,6 @@
         footer .contact-info {
             font-size: 14px;
             margin-bottom: 10px;
-        }
-
-        footer .contact-info p {
-            margin: 0;
-            line-height: 1.6;
         }
 
         footer .newsletter {
@@ -219,17 +248,6 @@
                 opacity: 1;
             }
         }
-
-        /* Scroll Animation */
-        @keyframes fade-in {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
     </style>
 </head>
 
@@ -245,59 +263,84 @@
     </div>
 
     <div class="content" id="home">
-        <h1>Welcome to Our Dynamic Website</h1>
-        <p>This is a sample content area. You can add more sections here.</p>
+        <h1>Welcome to Our Educational Project</h1>
+        <p>This project aims to enhance student learning through accessible resources and technology insights.</p>
 
-        <!-- Section 1 -->
+        <!-- Section 1: Introduction -->
         <div class="section" id="introduction">
             <img src="https://source.unsplash.com/600x400/?abstract,technology" alt="Abstract Technology">
             <div class="section-content">
                 <h2>Introduction</h2>
-                <p>This section introduces the content with a high-quality abstract image and smooth scroll animation. Let’s dive deep into the details of this dynamic website project.</p>
+                <p>This project addresses the challenge of understanding various technologies and their applications. It serves as an introductory guide for students to explore new fields.</p>
+                <div class="video-link">
+                    <a href="https://www.youtube.com/watch?v=Zn5TfqChnTo" target="_blank">
+                        <img src="https://img.youtube.com/vi/Zn5TfqChnTo/0.jpg" alt="Introduction Video Thumbnail">
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- Section 2 -->
+        <!-- Section 2: Syllabus -->
         <div class="section" id="syllabus">
             <img src="https://source.unsplash.com/600x400/?education,syllabus" alt="Education Syllabus">
             <div class="section-content">
                 <h2>Syllabus</h2>
-                <p>The syllabus contains key modules, resources, and reading materials that provide a comprehensive understanding of our topics.</p>
+                <p>Download the syllabus to get detailed insights into the curriculum, including key topics and assessments.</p>
+                <div class="video-link">
+                    <a href="https://www.youtube.com/watch?v=t3m1vCMK8e8" target="_blank">
+                        <img src="https://img.youtube.com/vi/t3m1vCMK8e8/0.jpg" alt="Syllabus Video Thumbnail">
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- Section 3 -->
+        <!-- Section 3: Library -->
         <div class="section" id="library">
             <img src="https://source.unsplash.com/600x400/?books,library" alt="Library Books">
             <div class="section-content">
                 <h2>Library</h2>
-                <p>Explore our library resources where you can find an extensive collection of books, articles, and multimedia learning materials.</p>
+                <p>Access a wealth of resources, including books and articles, to enhance your learning experience.</p>
+                <div class="video-link">
+                    <a href="https://www.youtube.com/watch?v=IDwpLsvtT0M" target="_blank">
+                        <img src="https://img.youtube.com/vi/IDwpLsvtT0M/0.jpg" alt="Library Video Thumbnail">
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- Section 4 -->
+        <!-- Section 4: About Us -->
         <div class="section" id="about-us">
             <img src="https://source.unsplash.com/600x400/?team,collaboration" alt="Team Collaboration">
             <div class="section-content">
                 <h2>About Us</h2>
-                <p>Learn more about our mission, vision, and the amazing team behind this dynamic project.</p>
+                <p>Learn about our mission, vision, and the dedicated team striving to provide quality education resources.</p>
+                <div class="video-link">
+                    <a href="https://www.youtube.com/watch?v=yXGe1o1twng" target="_blank">
+                        <img src="https://img.youtube.com/vi/yXGe1o1twng/0.jpg" alt="About Us Video Thumbnail">
+                    </a>
+                </div>
             </div>
         </div>
 
-        <!-- Section 5 -->
+        <!-- Section 5: More Information -->
         <div class="section" id="more-info">
             <img src="https://source.unsplash.com/600x400/?innovation,design" alt="Innovation Design">
             <div class="section-content">
                 <h2>More Information</h2>
-                <p>Stay tuned for more information about upcoming projects and initiatives. We are continuously evolving and improving.</p>
+                <p>Stay informed about upcoming projects, workshops, and new resources to aid your learning journey.</p>
+                <div class="video-link">
+                    <a href="https://www.youtube.com/watch?v=Fb3YxGfZ1qE" target="_blank">
+                        <img src="https://img.youtube.com/vi/Fb3YxGfZ1qE/0.jpg" alt="More Info Video Thumbnail">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <footer>
         <div class="contact-info">
-            <p>&copy; 2024 Dynamic Website. All rights reserved.</p>
-            <p>Email: info@dynamicwebsite.com</p>
+            <p>&copy; 2024 Student Help Website. All rights reserved.</p>
+            <p>Email: info@studenthelp.com</p>
         </div>
         <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
