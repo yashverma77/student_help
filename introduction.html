@@ -18,8 +18,8 @@
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;
-            background-image: url('https://www.transparenttextures.com/patterns/paper.png'); /* Add texture */
-            background-color: #f0f0f0; /* Crème color */
+            background-image: url('https://www.transparenttextures.com/patterns/paper.png'); 
+            background-color: #f0f0f0; 
         }
 
         .navbar {
@@ -32,11 +32,11 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1000; /* Ensures the navbar stays above other content */
+            z-index: 1000; 
         }
 
         .navbar.collapsed {
-            width: 60px; /* Smaller width when collapsed */
+            width: 60px; 
         }
 
         .navbar a {
@@ -48,15 +48,15 @@
             margin: 5px 0;
             border-radius: 4px;
             transition: background-color 0.3s;
-            justify-content: space-evenly; /* Space between icon and label */
+            justify-content: space-evenly; 
         }
 
         .navbar a .label {
-            display: inline; /* Show label by default */
+            display: inline; 
         }
 
         .navbar.collapsed a .label {
-            display: none; /* Hide label when collapsed */
+            display: none; 
         }
 
         .navbar a:hover {
@@ -75,16 +75,16 @@
             font-size: 18px;
         }
 
-        /* Centering the Introduction Heading */
+        
         h1 {
             text-align: center;
         }
 
-        /* Section Styling */
+       
         .section {
-            opacity: 0; /* Hidden by default */
-            transform: translateY(30px); /* Start slightly below */
-            transition: opacity 0.6s ease, transform 0.6s ease; /* Transition for fade in and slide up */
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: opacity 0.6s ease, transform 0.6s ease; 
             margin: 30px 0;
             background-color: #f7e9d7;
             padding: 20px;
@@ -93,11 +93,11 @@
         }
 
         .section.visible {
-            opacity: 1; /* Fully visible */
-            transform: translateY(0); /* Move to original position */
+            opacity: 1; 
+            transform: translateY(0); 
         }
 
-        /* Footer styling */
+       
         footer {
             background-color: #2F4F4F;
             color: white;
@@ -143,7 +143,7 @@
 
 <body>
 
-    <!-- Navbar -->
+   
     <div class="navbar" id="navbar">
         <button class="menu-button" id="menuButton">☰</button>
         <a href="index.html"><i class="fas fa-home"></i><span class="label">Home</span></a>
@@ -153,48 +153,48 @@
         <a href="about-us.html"><i class="fas fa-users"></i><span class="label">About Us</span></a>
     </div>
 
-    <!-- Content -->
+    
     <div class="content" style="margin-left: 220px; padding: 40px;">
         <h1><small> Introduction....!</small></h1>
 
-        <!-- Section 1: Introduction to CSE Department -->
+        
         <div class="section">
             <h2><i class="fas fa-laptop-code"></i> CSE Department Overview</h2>
             <p>The CSE department is a hub of innovative learning, fostering technological breakthroughs in areas such as AI, Machine Learning, and Data Science. Our students engage in hands-on projects that enhance their understanding of real-world applications. We encourage interdisciplinary collaboration, where students work on projects that intersect with other fields such as healthcare, finance, and environmental science, preparing them for diverse career opportunities...</p>
         </div>
 
-        <!-- Section 2: Artificial Intelligence -->
+        
         <div class="section">
             <h2><i class="fas fa-robot"></i> AI and Machine Learning</h2>
             <p>AI is revolutionizing the way we interact with machines. The department is actively researching AI technologies to build smarter systems. Students participate in competitions and workshops that enhance their skills. Additionally, our AI lab focuses on projects such as natural language processing, image recognition, and autonomous systems, providing students with practical experience in developing algorithms and deploying AI solutions...</p>
         </div>
 
-        <!-- Section 3: Cloud Computing -->
+        
         <div class="section">
             <h2><i class="fas fa-cloud"></i> Cloud Computing</h2>
             <p>Cloud technology allows scalable computing power. Our labs provide hands-on experience with cloud platforms like AWS and Azure, enabling students to develop applications that are robust and scalable. We also cover cloud architecture, security, and the best practices for deploying applications in the cloud. Our partnerships with cloud service providers give students access to real-world scenarios and resources to enhance their learning...</p>
         </div>
 
-        <!-- Section 4: Data Science -->
+       
         <div class="section">
             <h2><i class="fas fa-database"></i> Data Science</h2>
             <p>In a digital world, cybersecurity is critical. Our curriculum focuses on network security, encryption techniques, and safeguarding systems. Students learn to analyze large data sets and draw meaningful insights. We also emphasize the importance of data ethics and privacy, preparing students to navigate the complex landscape of data governance. Projects include predictive analytics, data visualization, and real-time data processing...</p>
         </div>
 
-        <!-- Section 5: Cybersecurity -->
+        
         <div class="section">
             <h2><i class="fas fa-shield-alt"></i> Cybersecurity</h2>
             <p>With increasing digital threats, our Cybersecurity program prepares students to defend against cyber attacks. We conduct regular workshops and simulation exercises to ensure practical knowledge. The curriculum covers penetration testing, ethical hacking, and incident response. Students also have opportunities to earn industry-recognized certifications, enhancing their employability in the field of cybersecurity...</p>
         </div>
 
-        <!-- Section 6: Internet of Things (IoT) -->
+        
         <div class="section">
             <h2><i class="fas fa-network-wired"></i> Internet of Things (IoT)</h2>
             <p>The Internet of Things is transforming everyday devices into smart devices. Our projects include smart home systems and wearable technology, preparing students for the future of connectivity. We focus on IoT architecture, communication protocols, and sensor technologies. Students also engage in projects that explore the implications of IoT on data privacy and security, ensuring they understand the challenges and responsibilities associated with connected devices...</p>
         </div>
     </div>
 
-    <!-- Footer -->
+    
     <footer>
         <div class="contact-info">
             <p>&copy; 2024 Student Help Website. All rights reserved.</p>
@@ -221,12 +221,12 @@
             navbar.classList.toggle('collapsed');
         });
 
-        // Intersection Observer for Scroll Animation
+        
         const sections = document.querySelectorAll('.section');
         const options = {
-            root: null, // use the viewport as the container
+            root: null, 
             rootMargin: '0px',
-            threshold: 0.1 // trigger when 10% of the section is visible
+            threshold: 0.1 
         };
 
         const observer = new IntersectionObserver((entries) => {
